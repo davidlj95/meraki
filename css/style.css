@@ -5,9 +5,45 @@ body {
 	font-family: verdana sans-serif;
 }
 
+/* Fonts */
+@font-face {
+font-family: 'Avenir';
+font-style: normal;
+font-weight: normal;
+src: local('Avenir'), url('../fonts/avenir-light.woff') format('woff');
+}
+
+@font-face {
+font-family: 'Avenir LT Std';
+font-style: normal;
+font-weight: normal;
+src: local('Avenir LT Std'), url('../fonts/AvenirLTStd-Medium.woff') format('woff');
+}
+
+@font-face {
+font-family: 'Avenir LT Std Roman';
+font-style: normal;
+font-weight: normal;
+src: local('Avenir LT Std Roman'), url('../fonts/AvenirLTStd-Roman.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Avenir LT Std';
+font-style: normal;
+font-weight: bold;
+src: local('Avenir LT Std 95 Black'), url('../fonts/AvenirLTStd-Black.woff') format('woff');
+}
+
+@font-face {
+font-family: 'Bell Gothic Std';
+font-style: normal;
+font-weight: normal;
+src: local('Bell Gothic Std'), url('../fonts/bell_gothic.woff') format('woff');
+}
+
 /* Fondo para wireframing */
-#fondo {
-	background-image: url('../img/wireframe.jpg');
+#wrapper {
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: fixed;
@@ -22,34 +58,36 @@ header {
 	height: 75px;
 	width: 100%;
 	position: fixed;
-	z-index: 10;
+	z-index: 1;
 	top: 0;
 	background-color: rgba(204, 204, 204, 0.47);
 }
 
 /* Logo de la cabecera */
-header > div.logo {
-	margin: 0 53px;
-	height: 100%;
-	float: left;
-}
 
-header > div.logo img {
-	margin-top: 8px;
-	height: 62.5px;
-}
+.logo {
+	width: 192px;
+    height: 71px;
+    float: left;
+    margin-left: 28px;
+    z-index: 2;
+    background: url(../img/logo.png)0 0 no-repeat;
+   }
 
+.logo:hover{
+    background: url('../img/logo2.png')0 0 no-repeat;
+   }
 /* Navegación */
 header > nav {
 	float: left;
-	height: 100%;
-	margin-left: -9px;
+    height: 100%;
+    margin-left: 17px;
 }
 
 header > nav > ul.menu {
 	overflow: auto;
-	margin: 0 auto;
-	height: 100%;
+    margin: 1px 8px;
+    height: 100%;
 }
 
 header > nav > ul.menu > li {
@@ -57,7 +95,7 @@ header > nav > ul.menu > li {
 	height: 100%;
 	padding: 0 15px;
 	text-transform: uppercase;
-	display: table;
+	display: table
 }
 
 header > nav > ul.menu> li:hover {
@@ -120,7 +158,7 @@ header > div.area-derecha {
 
 /* Tablas */
 header > div.area-derecha > table {
-	margin-left: 30px;
+	margin-left: 36px;
 }
 header > div.area-derecha > table td {
 	vertical-align: middle;
@@ -128,7 +166,7 @@ header > div.area-derecha > table td {
 
 /* Tabla de buscar */
 header > div.area-derecha > table.buscador {
-	margin-top: 14px;
+	margin-top: 15px;
 }
 
 header > div.area-derecha > table.buscador label {
@@ -144,13 +182,14 @@ header > div.area-derecha > table input[type="text"] {
 	padding-left: 10px;
 	width: 135px;
 	font-size: 12px;
+	border: none;
 }
 
 /* Tabla de idiomas y persona */
 header > div.area-derecha > table.idioma-persona {
-	margin-top: 4px;
-	width: 170px;
-	font-size: 11px;
+	margin-top: 1px;
+    width: 170px;
+    font-size: 11px;
 }
 
 header > div.area-derecha > table.idioma-persona tr td {
@@ -158,9 +197,14 @@ header > div.area-derecha > table.idioma-persona tr td {
 }
 
 header > div.area-derecha > table.idioma-persona tr td.person {
-	padding: 0 4px;
+	padding: 0 0px;
 	color: white;
 	font-size: 19px;
+
+}
+header > div.area-derecha > table.idioma-persona tr td.person i:hover {
+
+	color:#000033;
 }
 
 header > div.area-derecha > table ul.idiomas {
@@ -184,10 +228,20 @@ header > div.area-derecha > table ul.idiomas li a:hover {
 }
 
 /* Principal */
+main.index{
+    background-image: url('../img/background.jpg');
+}
+
+main.historia{
+    background-image: url('../img/background2.jpg');
+}
+main.meraki{
+    background-image: url('../img/background3.jpg');
+}
+
 main {
 	width: 100%;
-	height: 400px;
-	background-image: url('../img/background.jpg');
+	height: 767px;
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: absolute;
@@ -196,11 +250,247 @@ main {
 
 main > div.content {
 	position: relative;
-	margin-left: 595px;
-	margin-top: 310px;
-	color:white;
+    margin-left: 537px;
+    margin-top: 302px;
+    color: white;
 }
 
 h1, h2 {
-	font-family: "font37885";
+	font-family: "Avenir LT Std";
+    font-weight:bold;
+    font-size: 37px;
+    color:#000033;
+	text-transform: uppercase;
+}
+
+h1{
+margin-bottom: 11px;
+}
+
+h2{
+margin-bottom: 13px;
+
+}
+
+h3{
+	font-size: 25px;
+    font-family: 'Bell Gothic Std';
+    font-weight: bold;
+    line-height: 46px;
+    letter-spacing: 2.6px
+}
+
+main > div.content button{
+	margin: 18px 0px;
+    background-color: #de1436;
+    color: white;
+    border-radius: 9px;
+    width: 151px;
+    font-size: 16px;
+    padding: 4px;
+    border: none;
+    font-family: 'Avenir';
+    font-weight: normal;
+}
+
+main > div.content button:hover{
+	background-color: #000033;
+
+}
+
+
+/* main historia */
+main > ul.breadcrumbs{
+    overflow: auto;
+    margin-left: 45px;
+    margin-top: 116px;
+    height: 17px;
+}
+
+main > ul.breadcrumbs>li{
+        font-size: 14.5px;
+    font-family: "Avenir";
+    font-weight: normal;
+    float: left;
+    color: #de1436;
+
+}
+
+main > ul.breadcrumbs>li>a{
+
+    color: black;
+    text-decoration: none;
+    float: left;
+    padding: 0px 0px 0px 6px;
+    color:#fff1f2;
+
+}
+main > div.paghistoria {
+	position: relative;
+    margin-left: 505px;
+    margin-top: 18px;
+    color: white;
+}
+
+
+main > div.paghistoria h1{
+    margin-bottom: 17px;
+    font-family: "Avenir LT Std";
+    font-weight: bold;
+    font-size: 34px;
+    letter-spacing: 2.1px;
+    color: #000033;
+}
+main > div.paghistoria hr{
+	border: solid #de1436;
+    width: 229px;
+    border-width: 1.5px;
+    margin: 0px 0px 26px 0px;
+
+}
+main > div.paghistoria p{
+    width: 83%;
+    font-family: "Avenir";
+    font-weight: lighter;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: justify;
+    padding-bottom: 19px;
+}
+
+/* main meraki */
+main > div.merakis {
+    position: relative;
+    margin-left: 42px;
+    margin-top: 24px;
+    color: white;
+
+}
+
+
+main > div.merakis h1{
+    margin-bottom: 17px;
+    font-family: "Avenir LT Std";
+    font-weight: bold;
+    font-size: 34px;
+    letter-spacing: 2.1px;
+    color: #000033;
+}
+main > div.merakis hr{
+    border: solid #de1436;
+    width: 229px;
+    border-width: 1.5px;
+    margin: 0px 0px 26px 0px;
+
+}
+main > div.merakis > div.texto {
+
+     float: left;
+     padding-right: 73px;
+
+}
+main > div.merakis > div.texto p {
+    width: 371px;
+    font-family: "Avenir";
+    font-weight: lighter;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: justify;
+    padding-bottom: 19px;
+}
+
+
+
+
+
+/* footer */
+footer {
+	height: 75px;
+    width: 100%;
+    background-color: rgba(12, 13, 59, 0.51);
+    bottom: 0;
+    position: fixed;
+}
+
+/* redes */
+
+footer > div.redes {
+	float: left;
+    margin: 27px 0px 0px 40px;
+}
+
+footer > div.redes a {
+	margin-left: 1px;
+}
+
+footer > div.redes  img{
+	width: 22px !important;
+    height: 22px !important;
+}
+
+/* telefono */
+
+footer > div.telefono {
+	float: left;
+    margin: 27px 0px 0px 50px;
+}
+
+footer > div.telefono img {
+	width: 22px !important;
+    height: 22px !important;
+}
+
+footer > div.telefono p {
+	float: right;
+    font-size: 13px;
+    font-weight: lighter;
+    font-family: Avenir;
+    color: white;
+    margin-left: 16px;
+    margin-top: 4px;
+}
+
+/* patrocinadores */
+
+footer > div.organiza {
+    margin: 15px 0px 0px 44px;
+    float: left;
+}
+
+footer > div.organiza p {
+	float: left;
+    font-size: 13px;
+    font-weight: lighter;
+    font-family: Avenir;
+    color: white;
+    margin-left: 19px;
+    margin-top: 14px;
+}
+
+footer > div.organiza img {
+	width: 70px !important;
+    height: 44px !important;
+    margin-left: 8px;
+}
+
+/* colaboradores */
+
+footer > div.colaboradores {
+     margin: 12px 0px 0px 0px;
+}
+
+footer > div.colaboradores p {
+    float: left;
+    font-size: 13px;
+    font-weight: lighter;
+    font-family: Avenir;
+    color: white;
+    margin-left: 12px;
+    margin-top: 17px;
+}
+
+footer > div.colaboradores img {
+	width: 96px !important;
+    height: 52px !important;
+    margin-left: 1px;
 }
